@@ -1,1 +1,6 @@
-
+services:
+  - type: web
+    name: wh-escarlata
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run dashboard/dashboard_escarlata.py --server.port $PORT --server.address 0.0.0.0
